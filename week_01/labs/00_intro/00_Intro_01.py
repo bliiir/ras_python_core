@@ -13,3 +13,12 @@
 	- Use the interpretor to perform simple math.
 	- Calculate how many seconds are in a year.
 '''
+
+# 1
+print ("hello world")
+
+# 2
+print ("I use cmd+B in sublime to run the code")
+
+# 3
+print ("I did it :)")

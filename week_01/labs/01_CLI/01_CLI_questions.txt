@@ -1,12 +1,45 @@
 1 - Using the command line, how do you:
     - change directories?
+
+A: cd foldername
+Use cd .. to go one level up the tree and use / to navigate several levels at once
+
     - list the contents of a folder?
+
+A: ls
+
     - print the path of the current directory?
+
+A: pwd
+
     - move a file from one location to the another?
+
+A: mv <origin> <destination>
+
     - copy a file from one location to another?
+
+A: cp <origin> <destination>
+
     - create a file?
+
+A: touch <filename>
+
     - create a folder?
+
+A: mkdir <foldername>
+
     - delete a file?
+
+A: rm <filename>
+
     - delete a folder?
+
+A: rm -R <foldername>
+
     - print the contents of a file?
+
+cat <filename>
+
     - edit the contents of a file?
+
+vim <filename> or sublime <filename> if properly set up

@@ -1,18 +1,40 @@
 0 - Why do we not program in plain English (or another natural language)?
 
+A: English is a natural language, not a formal one and thus has too many ambiguity, reduncancy and is not literal
+
 1 - What is the difference between an interpretor and a compiler?
     Which is used for Python?
 
+A: An interpretor reads the code at runtime and executes on the fly - this is what Python does. A compiler takes the code and changes it into machine code which is then run on the machine.
+
 2 - What are two ways to execute Python code?
 
+A: In the terminal and in the Sublime console
+
 3 - How do you execute a Python script?
+
+A: You write Python3 filename.py in the terminal or you press cmd+b on the mac keyboard in Sublime
 
 4 - In your own words describe what a program is
     and what programs are made up of.
 
+A: An unambiguous set of instructions consisting of languagge syntax compliant structured tokens
+
 5 - What are the main three types of errors and how do you come across them?
+
+A:
+1) Structure - not the right order of the tokens
+2) Tokens - language inappropriate tokens
+3) Typos
 
 6 - What does it mean to debug a program?
     What are some ways to debug a program?
 
+A: To find mistakes in the code.
+1) You can use print statements to track the status of your variables
+2) you can use the debug modules available for Sublime and other editors
+3) You can use a linter for Sublime and other editors
+
 7 - What is a “high-level language” / what’s a “low-level-language”?
+
+A: A high level language is one that abstracts away from the pure machine code to make it easier for the human mind to work with. A low level language is one that manipulates the memory of the computer more directly and thus is more efficient

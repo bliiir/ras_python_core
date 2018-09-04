@@ -3,27 +3,104 @@
 Perform the following tasks using the CLI and copy and paste the commands and results below.
 
 - Navigate to your home directory
+
+```
+cd ~
+```
+
 - Create a new directory called CodingNomads. We will use this folder to house materials for the course.
+
+```
+mkdir CodingNomads
+```
+
 - Move into the CodingNomads folder
+```
+cd Codingnomads
+```
+
 - Create new folder cli_testing
+```
+mkdir cli_testing
+```
+
 - Inside of folder cli_testing,
     a. print the directory path
+
+    ```
+    pwd
+    ```
+
     b. create 3 new .txt files all with different names (file1.txt, file2.txt, file3.txt)
+
+    ```
+    touch file1.txt file2.txt file3.txt
+    ```
+
     c. list the contents of the folder
+
+    ```
+    ls
+    ```
+
     d. rename one of the files
+
+    ```
+    mv file1.txt file4.txt
+    ```
+
 - Inside of folder cli_testing, create a new folder
+
+```
+mkdir new
+```
+
 - Copy a file from cli_testing to the new folder
+```
+cp file4.txt new
+```
+
 - Move a different file from cli_testing to the new folder
+```
+mv file3.txt new
+```
 - Demonstrate removing:
     a. A file
+    ```
+    rm file2.txt
+    ```
+
     b. A folder
+    ```
+    rm -R new
+    ```
 
 ## vim
     a. Use $ vim to write some text inside a file
+    ```
+    vim
+    some text inside a file
+    :wq some.txt
+    ```
     b. Use $ cat print contents of file
+    ```
+    cat some.txt
+    ```
+
     c. Use $ grep to search for a word inside file
+    ```
+    grep inside some.txt
+    ```
 
 ## explore advanced CLI
 - What is the difference between the two commands > and >>?
+
+A: One replaces the content of the target file and the other appends to it
+
 - Append the text "how?!" of hello.txt to my_file.txt
+```
+cat hello.txt >> my_file.txt
+```
+
 - Overwrite the content of my_file.txt with "tell me"
+echo "tell me" > my_file.txt
