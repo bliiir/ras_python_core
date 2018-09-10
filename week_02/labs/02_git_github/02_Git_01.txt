@@ -43,6 +43,11 @@ RAS: This sequence creates two unrelated stories if a README.md file is created 
 
 RAS: This only works if I rm the .git folder that comes with the clone and then push to the new repo I made because the reference to the original remote comes with the clone. Have invited you guys as collaborators to show it worked.
 
+The three repos:
+https://github.com/bliiir/re2
+https://github.com/bliiir/python-binance
+https://github.com/bliiir/binance-official-api-docs
+
 
 
 
