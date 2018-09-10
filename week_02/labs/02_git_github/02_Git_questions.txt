@@ -1,8 +1,15 @@
 1 - What is git?
+A computer file versioning control system created by Linus Torvalds
 
 2 - What is Github?
+A web based hosting service for git
 
 3 - What is the general flow of git?
+a. Initialise
+b. add files or clone remote
+c. add files to staging
+d. commit files
+e. push
 
 4 - What is a branch?
 
@@ -12,12 +19,29 @@
 
 7 - What are the commands to do the following?
 	- initialize a git repository
+    git init
+
 	- clone a repository from Github
-	- add a file to the staging area
-	- make a commit
-	- push to Github
-	- pull from Github
+    git clone <remote>
+
+    - add a file to the staging area
+    git add <filename>
+
+    - make a commit
+    git commit -m "message"
+
+    - push to Github
+    git push origin master
+
+    - pull from Github
+    git pull origin master
+
 	- see the names of the branches
+    git branch -a for all branches local and remote
+
 	- see the names of the remotes
-	- add a new remote
+    git branch -r for remote branches only
+
+    - add a new remote
+    git remote add origin <url>
 

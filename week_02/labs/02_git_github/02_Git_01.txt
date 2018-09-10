@@ -1,6 +1,8 @@
 1 - Complete git tutorial here: https://try.github.io/
+RAS: Have done the first few levels. Stopped at relative references
 
 2 - Create Github account if you have not already done so.
+RAS: Done
 
 There are two main ways in which you get started working with a git repository on your local machine. The first is to initialize a folder, or a project, as a new git repository. This creates the .git folder in the project that tracks all of the git functionality. The second way is to clone an existing repository from Github onto your machine.
 
@@ -11,6 +13,8 @@ There are two main ways in which you get started working with a git repository o
 	- add a new remote to your local git repository that points to your Github
 	- push the repository to your Github
 	- visit the Github repository to make sure the contents were pushed
+
+RAS: This text is phrased in a way that is very hard for me to understand. I chatted to Martin about it and have done a clone and push to a new github repo here, which was the intent we think: https://github.com/bliiir/labs_week_02_test_repository.
 
 4 - Initializing a new git repository:
 	- in your CodingNomads folder, create new folder git_practice
@@ -28,12 +32,16 @@ There are two main ways in which you get started working with a git repository o
             - Commit file(s)
             - Push file(s) to Github repository
 
+RAS: This sequence creates two unrelated stories if a README.md file is created when creating the git_practice on Github. When pushing/pulling git refuses to merge them. This can be fixed using the  --allow-unrelated-histories parameters, but would be more elegantly handled by making it clear that no README.md file should be created when creating the remote.
+
 5 - More practice cloning
 	- spend some time looking at the repositories on Github
 	- find three projects that interest you and clone them to your local machine (in a new folder inside of CodingNomads)
 	- create repositories on your Github for each project
 	- add remotes to each local repo
 	- push each repo to your Github
+
+RAS: This only works if I rm the .git folder that comes with the clone and then push to the new repo I made because the reference to the original remote comes with the clone. Have invited you guys as collaborators to show it worked.
 
 
 

@@ -1,32 +1,63 @@
 1 - What is a value?
+letters, numbers etc
+"One of the basic units of data, like a number or string, that a program manipulates. "
 
 2 - What is a type?
+the categories that values fall into - ie integer, string, float etc
 
 3 - What are some values we have seen so far?
+uhm, if you actually mean value, then "Hello World!" and "42". If you mean types, then strings and integers
 
 4 - What is an example of a int? A floating-point number? A string?
+int = 3
+float = 3.14
+str = "3.14"
 
 5 - What is a variable?
+a labelled value of a certaint type
 
 6 - How do you assign the variable x to the value of 10?
+x = 10
 
 7 - What is an example of an illegal variable name?
+1var
+str
 
 8 - What are keywords and what are they used for?
+words reserved for commands, types etc in python
 
 9 - What are operators and what are they used for?
+In this context, arithmetic symbols such as + and - used to perfom arithmetic operations on values and variables
+
 
 10 - Use the interpretor to demonstrate the use of some of the operators. Give the input and output of addition, multiplication and exponentiation.
+>>> 2+2
+4
+>>> 2*2
+4
+>>> 2**2
+4
 
 11 - What is floor division? How does Python 3 handle floor division?
+floor division returns the integer value of a division without rounding but simply cutting of what comes after the decimal point
 
 12 - What is the difference between an expression and a statement?
+Roughly speaking: An expression uses values, variables, and operators while a statement creates them
 
 13 - What is the order of operations?
+Roughtly:
+()
+**
+* and /
++ and -
+More detail here: https://www.tutorialspoint.com/python/operators_precedence_example.htm
 
 14 - What does the + operator do when performed on strings? What does the * operator do when performed on strings? What operators can you not use on strings?
+Concatenation
 
 15 - How do you put comments in your code? What are comments used for?
+Single line comments are preceded with #
+Multi line comments are wrapped in ''' comment '''
 
 
 

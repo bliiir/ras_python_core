@@ -1,27 +1,52 @@
 1 - What is a boolean expression?
+An expression that evaluates to either True or False
 
 2 - What are relational operators used for?
+As part of boolean expressions to determine if a condition is true - for example: Is 5 bigger than 4 would be expressed 5>4 with the > as the relational operator
 
 3 - What is the difference between == and = ?
+== is a relational operator and = is an assignment operator
 
 4 - What are the three logical operators?
+and, or, not
 
 5 - What do relational and logical operators evaluate to?
+True or False
 
 6 - What is the if statement used for?
+Conditional execution
 
 7 - What is an if/else statement used for?
+Conditional with alternative execution. Test one condition and if that is False execute the alternative statement.
 
 8 - What is a chained conditional? How do you chain conditionals?
+When you chain conditions together to accomodate more than one or two possibilities
+You use "elif" or "else if"
 
 9 - What is a nested conditional?
+When conditional statements are nested under eachother:
+if x == y:
+    if y == z:
+        print("foo")
+    else:
+        print("bar")
+elif x>y:
+    print("brrr")
+else:
+    print("manamanah")
 
 10 - Is there a limit to how many conditional statements you can nest?
+Not conceptually, but the specific program might hit memory boundaries and halt and there has to be at least one.
 
 11 - What is a while loop?
+A command used to iterate through a set of statements until the condition the while loops is conditioned on evaluates to false or the loop is broken with a break statement
 
 12 - What is a for loop? How is it different than a while loop?
+A for loop iterates through a range or a list. A while loop executes WHILE it's condition evaluates to True.
 
 11 - What does the break statement do?
+Breaks out of while, try and except conditionals
 
 12 - Is there a limit to how many loops you can nest?
+See 10
+
