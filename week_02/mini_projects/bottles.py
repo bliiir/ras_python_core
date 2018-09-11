@@ -19,3 +19,9 @@ so to make it a bit harder, here are some rules to follow.
 4) Put a blank line between each verse of the song.
 
 '''
+for bottle in range(100,0,-1):
+    if bottle >1:
+        print(bottle, "bottles", end=" ")
+    elif bottle == 1:
+        print(bottle, "bottle", end=" ")
+    print(" of beer on the wall")

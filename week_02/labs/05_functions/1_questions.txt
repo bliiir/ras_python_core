@@ -1,50 +1,169 @@
 1 - What is a function?
+A function is a named sequence of statements that performs a computation
 
 2 - What does mean to have a function that "takes" a value?
+That a value parameter is passed to the function when calling it
 
 3 - What is a return value?
+The value returned by the function with the return() command
 
 4 - What do type conversion functions do?
+That you convert a value from one type to another - for example str(int(100) converts the integer 100 to a string "100"
 
 5 - What happens if you call the int() function and pass it a string?
+It tries to convert it to an integer and throws an error if it can't
+```
+>>> print(int("100"))
+100
+>>> print(int("K"))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: 'K'
+>>>
+```
 
 6 - What happens if you call the str() function and pass it an int?
+It converts it to a string
+```
+>>> print(str(100))
+100
+>>>
+```
 
 7 - How do you import a class to one of your programs?
+You write:
+```import classname```
+at the top(to ensure that the methods are available further down) of the script
 
 8 - How do you use math functions in one of your programs?
+you call the ```math``` method - like this:
+```
+import math
+print(math.pi)
+```
 
 9 - What is the dot notation?
+A format used to call a method inside a class or module. For example:
+```
+math.degrees(x)
+```
+Calls the degrees method inside the built in math module
 
 10 - What is composition?
+The ability to compose a a single command of several function and method calls - like this:
 
 11 - Give an example of composition in a function call?
+```
+x = math.sin(degrees / 360.0 * 2 * math.pi)
+```
 
 12 - How do you define a function?
+```
+def function_name():
+```
 
 13 - Provide the function header of a function named hello_world().
+```
+def hello_world():
+```
 
 14 - Provide the function header and body of a function named hello_world() that prints out "Hello World" 3 times.
+def hello_world():
+    print("Hellow World\n"*3)
 
 15 - Can functions call other functions?
+Yes
 
 16 - Complete Exercise 3.1 (p.26) and 3.2 (p.27) from the text book.
 
+3.1
+```py
+def right_justify(s):
+    spaces = 70 - len(s)
+    print(spaces*" "+s)
+
+right_justify("Rasmus")
+                                                                Rasmus
+```
+
+3.2
+```
+def print_twice(bruce):
+    print(bruce)
+    print(bruce)
+
+def do_twice(f,val):
+    f(val)
+    f(val)
+
+def do_four(f,val):
+    do_twice(f,val)
+    do_twice(f,val)
+
+do_twice(print_twice,"spam")
+
+do_four(print_twice,"spam")
+```
+
+3.3
+```
+def top_bottom(cols):
+    for i in range(cols):
+        print("+ - - - -", end=" ")
+    print("+")
+
+def side(cols):
+    for i in range(cols):
+        print("|        ", end=" ")
+    print("|")
+
+def grid(rows, cols):
+    top_bottom(cols)
+    for i in range(rows):
+        for j in range(4):
+            side(cols)
+        top_bottom(cols)
+
+
+while True:
+
+    try:
+        cols = int(input("Columns: "))
+        rows = int(input("Rows: "))
+        break
+    except:
+        print("input error - try again")
+        continue
+
+grid(rows, cols)
+```
+
+
 17 - What is the flow of execution?
+The order that statements are executed in
 
 18 - Where does a program begin execution?
+At the top of the script
 
 19 - How does a function call change the flow of of execution?
+Functions can call eachother and that might cause the execution flow to become non-linear from a pure up and down
 
 20 - Do the rules of composition apply to method parameters as well?
+Yes - you can use a method as a parameter in a function call
 
 21 - Do parameters and variables inside of a function exist outside of the method? Why or why not?
+No. Because a function is created and executed and all values and variables are destroyed post execution to preserver memory
 
 22 - How can stack diagrams be useful?
+stack diagrams show the value of each variable, and they also show the function each variable belongs to.
 
 23 - What is the difference between a "fruitful" function and a void function?
+A fruitful function has a return statement and a void function does not
 
 24 - What are some of the reasons we separate our code into functions?
+* To be able to reuse a useful piece of code many times without having to repeat it
+* To break out programs into smaller and more manageable pieces
+
 
 25 - What is the difference between the following two statements?
 	import math
@@ -52,3 +171,15 @@
 	from math import *
 
 	How can you use the functions of the math module in each case?
+
+    In the first case you use modul.methodname() to call it
+    In the second case you can call the methodname directly and do not have to prepend it with the module name
+
+    Example:
+        ```
+        from urllib import request
+        mine = request()
+
+        import urllib.request
+        mine = urllib.request()
+        ```

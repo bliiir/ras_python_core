@@ -7,3 +7,23 @@ Take two numbers from the user, an upper and lower bound. Using a loop, calculat
 		The sum is: 5050
 		The average is: 50.5
 '''
+
+# Get user input
+while True:
+
+    try:
+        upper = int(input("Upper: "))
+        lower = int(input("Lower: "))
+        break
+    except:
+        print("input error - try again")
+        continue
+
+sum = 0
+
+# Sum up the numbers
+for each in range(lower,upper):
+    sum = sum + each
+
+# Print out the sum and average
+print("Sum", sum, "Average", sum/(upper-lower))

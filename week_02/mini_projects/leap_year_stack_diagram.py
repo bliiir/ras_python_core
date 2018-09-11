@@ -38,3 +38,26 @@ http://www.pythontutor.com/visualize.html#mode=edit
 for better visual understanding and support in creating the stack diagram.
 
 '''
+
+def leap_year(y):
+    if y%4 ==0:
+        if y%100 == 0:
+            if y%400 == 0:
+                return(True)
+    return(False)
+
+while True:
+
+    try:
+        y = int(input("Year: "))
+        if y < 1900 or y > 10**5:
+            print("Out of range - try again")
+            continue
+        break
+    except:
+        print("Not an integer - try again")
+        continue
+
+print(leap_year(y))
+
+# https://goo.gl/kFCdik

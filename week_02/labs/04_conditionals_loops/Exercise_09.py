@@ -13,3 +13,9 @@ The output should look something like this:
 	10|20|30|40|50|60|70|80|90|100|
 
 '''
+line = ""
+for row in range(1,11):
+	for col in range(1,11):
+		line = line + str(row*col) + "|"
+	print(line)
+	line = ""

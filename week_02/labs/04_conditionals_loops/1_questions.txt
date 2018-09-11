@@ -36,7 +36,7 @@ else:
     print("manamanah")
 
 10 - Is there a limit to how many conditional statements you can nest?
-Not conceptually, but the specific program might hit memory boundaries and halt and there has to be at least one.
+No
 
 11 - What is a while loop?
 A command used to iterate through a set of statements until the condition the while loops is conditioned on evaluates to false or the loop is broken with a break statement
@@ -48,5 +48,5 @@ A for loop iterates through a range or a list. A while loop executes WHILE it's 
 Breaks out of while, try and except conditionals
 
 12 - Is there a limit to how many loops you can nest?
-See 10
+Not conceptually, but the specific program might hit memory boundaries and halt and there has to be at least one.
 
