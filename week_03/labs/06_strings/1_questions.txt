@@ -1,6 +1,10 @@
 1 - What is a string?
 
+    A sequence of characters
+
 2 - What is an index?
+
+    A pointer to a specific character in the string in this case
 
 3 - What letter will the following code print? Why?
 
@@ -8,26 +12,151 @@
     index_two = word[2]
     print index_two
 
+    ```l```
+
 4 - What is the len() functions used for?
+
+    To determine the length of a string
 
 5 - How can you get the last character of a word using the len() function?
 
+    word[len(word)-1]
+
 6 - What is string slicing and how does it work?
+
+    Extracting a specific range of the characters in a string. In Python you indicate the range inside the brackets after the name of the string variable with the first character in the range before a : and the last character in the range after the : - Like this:
+    ```
+    "word"[1:3]
+    ```
+    Which returns "ord"
+
+    If you want all the characters from the start to for example the second character, you write:
+
+    ```
+    "word"[:1]
+
+    Or the second to the last:
+
+    "word"[1:]
 
 7 - How to do slice the string "python" to produce the string "thon"?
 
+    "python"[2:]
+
 8 - How can you use slicing to store the first and last character of a word in separate variables?
+
+    first = word[0]
+    last = word[-1]
 
 9 - What are the answers to Exercise 8.4 (p.80) from the textbook?
 
+    > The following functions are all intended to check whether a string contains any lowercase letters, but at least some of them are wrong. For each function, describe what the function actually does (assuming that the parameter is a string).
+
+    ```
+    def any_lowercase1(s):
+        for c in s:
+            if c.islower():
+                return True
+            else:
+                return False
+    ```
+    This function does NOT work as intended. It returns False immediately if the first letter is not lowercase.
+
+    ```
+    def any_lowercase2(s):
+        for c in s:
+            if 'c'.islower():
+                return 'True'
+            else:
+                return 'False'
+    ```
+    This function does NOT work as intended. Same as above, except it returns a string with the words "True" and "False", not the actual boolean values True/False
+
+    ```
+    def any_lowercase3(s):
+        for c in s:
+            flag = c.islower()
+        return flag
+    ```
+    This function does NOT work as intended. Returns the Boolean for the LAST letter in the string
+
+    ```
+    def any_lowercase4(s):
+        flag = False
+        for c in s:
+            flag = flag or c.islower()
+            print(flag)
+        return flag
+    ```
+    This function works as intended.
+
+
+    ```
+    def any_lowercase5(s):
+        for c in s:
+            if not c.islower():
+                return False
+        return True
+    ```
+    This function does NOT work as intended. It returns False immediately if a character in the loop is uppercase.
+
+
 10 - Can you change one or more character of a string? Why or why not?
+
+    No. Strings are immutable
 
 11 - What is invocation?
 
+    A method call - ie calling a function inside a module or class
+
 12 - How do you invoke the find() method on the string word with the value 'hello' to find the index of the letter e?
+
+    word = "hello"
+    word.find("e")
 
 13 - Complete Exercise 8.5 (p.80) (Caesar cypher) from the textbook.
 
+        > A Caesar cypher is a weak form of encryption that involves “rotating” each letter by a fixed number of places. To rotate a letter means to shift it through the alphabet, wrapping around to the beginning if necessary, so ’A’ rotated by 3 is ’D’ and ’Z’ rotated by 1 is ’A’.
+
+        >To rotate a word, rotate each letter by the same amount. For example, “cheer” rotated by 7 is “jolly” and “melon” rotated by -10 is “cubed”. In the movie 2001: A Space Odyssey, the ship computer is called HAL, which is IBM rotated by -1.
+
+        >Write a function called rotate_word that takes a string and an integer as parameters, and returns a new string that contains the letters from the original string rotated by the given amount.
+
+        > You might want to use the built-in function ord, which converts a character to a numeric code, and chr, which converts numeric codes to characters. Letters of the alphabet are encoded in alphabetical order, so for example:
+
+        >>> ord('c') - ord('a')
+        2
+```
+def rotate_word(_string, _number):
+    chrs = []
+    for letter in _string:
+        chrs.append(chr(ord(letter)+_number))
+    return("".join(chrs))
+
+print(rotate_word("Rasmus", 5))
+```
+
+
+
+Because 'c' is the two-eth letter of the alphabet. But beware: the numeric codes for upper case letters are different.
+
+Potentially offensive jokes on the Internet are sometimes encoded in ROT13, which is a Caesar cypher with rotation 13. If you are not easily offended, find and decode some of them. Solution: http://thinkpython2.com/code/rotate.py.
+
 14 - Follow the directions for Exercise 8.1 (p.79) until you feel comfortable with the string methods and what methods are available.
 
+    Read the documentation of the string methods at http://docs.python.org/3/library/stdtypes.html#string-methods . You might want to experiment with some of them to make sure you understand how they work. strip and replace are particularly useful.
+
+    The documentation uses a syntax that might be confusing. For example, in find(sub[, start[, end]]), the brackets indicate optional arguments. So sub is required, but start is optional, and if you include start, then end is optional.
+
+        word = "barcelona Python 2018"
+
+        cap = word.capitalize()
+        fold = word.casefold()
+        center = word.center(80, "*")
+        count = word.count("arce", 0, 6)
+        encode = word.encode(encoding="utf-8", errors="strict")
+        ends = word.endswith("18")
+
 15 - How is the in operator used?
+```in``` is a boolean operator that takes two strings and returns True if the first appears as a substring in the second or a string and a list and see if the string is in the list. You use it to find out if your string is in a larger string or set of strings.
+
