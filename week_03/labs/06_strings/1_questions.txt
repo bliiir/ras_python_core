@@ -136,8 +136,6 @@ def rotate_word(_string, _number):
 print(rotate_word("Rasmus", 5))
 ```
 
-
-
 Because 'c' is the two-eth letter of the alphabet. But beware: the numeric codes for upper case letters are different.
 
 Potentially offensive jokes on the Internet are sometimes encoded in ROT13, which is a Caesar cypher with rotation 13. If you are not easily offended, find and decode some of them. Solution: http://thinkpython2.com/code/rotate.py.
