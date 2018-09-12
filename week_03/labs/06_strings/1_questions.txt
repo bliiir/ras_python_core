@@ -111,14 +111,10 @@
 
 12 - How do you invoke the find() method on the string word with the value 'hello' to find the index of the letter e?
 
-<<<<<<< HEAD
     word = "hello"
     word.find("e")
 
-13 - Complete Exercise 8.5 (p.80) (Caesar cypher) from the textbook.
-=======
 13 - Complete Exercise 8.5 (p.96) (Caesar cypher) from the textbook.
->>>>>>> 4583e4e425cfb631f9189920cc6a73c57f44edad
 
         > A Caesar cypher is a weak form of encryption that involves “rotating” each letter by a fixed number of places. To rotate a letter means to shift it through the alphabet, wrapping around to the beginning if necessary, so ’A’ rotated by 3 is ’D’ and ’Z’ rotated by 1 is ’A’.
 
