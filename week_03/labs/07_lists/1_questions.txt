@@ -1,44 +1,114 @@
 1 - Can you have a list with more than one type?
+    Yes
 
 2 - How do you create a list?
+    my_list = []
+
+    or
+
+    my_list = list()
+
+    or
+
+    my_list = ["first item", 2, 3, 4.32]
+
+    ...
 
 3 - How do you nest a list?
+    ```
+    >>> my_list = [1, 2, ["a","b","c"], 4]
+    >>> my_list
+    [1, 2, ['a', 'b', 'c'], 4]
+    ```
 
 4 - Lists are mutable. Explain this.
+    Items in the list can be altered - replaced, deleted etc - like this:
+
+    ```
+    >>> my_list[2] = 3
+    >>> my_list
+    [1, 2, 3, 4]
+    ```
+
 
 5 - What does it mean to have the [] operators on the left side of an assignment?
+    That the item in the position indicated inside the [] on the left side of the assignment will be replaced. Like I did above.
+
 
 6 - What happens with a index value is negative? How does this change how an element is accessed?
+    That means the position in the list is accessed from the back of the list. So a[-1] means the last item in the list and a[-2] is the second to last item
 
 7 - How can you use the in operator to determine in a value exists in a list?
+    ```
+    >>> 3 in [1,2,3]
+    True
+    ```
 
 8 - How can you use the + and * operators on lists?
+    Like with strings -
+    + can be used for concatenation
+    + can be used to repeat the list
 
 9 - What is an augmented assignment statement?
+    It's a name for the shorthand version of updating a variable with itself and some value. For example:
+
+    x += 1
+
+    is the augmented assignment statement version of:
+
+    x = x + 1
 
 10 - WHat are three ways delete an element from a list? How are they different?
 
+pop:
+    Removes the specified item from the list and returns it's value
+    my_string.pop(index)
+
+del:
+    removes the item from the list without returning the value. Del can also be used to remove a range of values
+    del my_string[index_start:index_end]
+
+remove:
+    Removes the specified item from the list without removing the value. The item can be specified by
+    my_string.remove[index or value]
+
 11 - What is the difference between and list and a string?
+    Lists are mutable and are presented in a different format
 
 12 - What is the difference between the list() function and the split() method?
+    List is a FUNCTION that takes an object as it's parameter and converts it to a list
+    Split() is a METHOD that acts on a string object and returns a lit
 
 13 - How do you use a delimiter with the split() method?
+    inside the parenthesis - like this:
+
+        my_string.split(",")
 
 14 - What is the `is` operator used for?
 
+    To test if something points to the same place in memory as something else
+
+
 15 - If two objects are identical does that also make them equivalent?
+    Yes
 
 16 - If two objects are equivalent does that also make them identical?
+    No
 
 17 - What is a reference?
+    The association of a variable with an object
 
 18 - What is it called when an object has more than one reference?
+    Aliasing
 
 19 - Give an example of an operation that modifies a list.
+    my_list[2] = "Altered item"
 
 20 - Give an example of an operation that creates a new list.
+    my_list = []
 
 21 - What is one reason it is important to know the difference between the two kinds of operations above?
+    To avoid overwriting an entire list
 
 
 
