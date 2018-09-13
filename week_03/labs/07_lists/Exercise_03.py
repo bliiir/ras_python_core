@@ -12,18 +12,31 @@ Write a function called nested_sum that takes a list of lists of integers and ad
 21
 '''
 
+# def nested_sum(_list):
+
+#     total = 0
+
+#     for item in _list:
+#         try:
+#             total += item
+#         except TypeError:
+#             total += nested_sum(item)
+#     return(total)
+
+
 def nested_sum(_list):
-
     total = 0
+    for i in _list:
+        if isinstance(i, list):
+            total += nested_sum(i)
+        else:
+            try:
+                total += i
+            except:
+                continue
+    return total
 
-    for item in _list:
-        try:
-            total += item
-        except TypeError:
-            total += nested_sum(item)
-    return(total)
-
-l_o_l = [1, [1,2], [2,3,4], [4,5,6,7]]
+l_o_l = [1, [1,2], [2,3,4], [4,5,[67,32,2], 7], "will I break?"]
 
 print(nested_sum(l_o_l))
 

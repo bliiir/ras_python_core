@@ -1,4 +1,5 @@
 1 - What is one important difference between tuples and lists?
+Tuple are imutable
 
 2 - What are two ways to create a tuple?
 
