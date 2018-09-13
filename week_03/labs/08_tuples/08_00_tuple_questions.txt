@@ -1,19 +1,30 @@
 1 - What is one important difference between tuples and lists?
-Tuple are imutable
+    Tuples are imutable
 
 2 - What are two ways to create a tuple?
+    a = ()
+    a = tuple()
 
 3 - Give an example of tuple assignment to assign two variables.
+    a = b, c
 
 4 - Why is it beneficial to return a tuple from a function?
+    It lets you return more than one value
 
 5 - What are variable-length arguments?
+    Variable-length arguments is the name for a parameter name that begins with * and gathers arguments into a tuple.
 
 6 - How is gather and scatter used?
+    Gather collects a number of arguments into a tuple - printall(*args )
+    Scatter takes a tuple and breaks it up into separate values - divmod(*args)
 
 7 - What does the zip function do?
+    It combines two sequences into a list of tuples
 
 8 - What does the items method do?
+    When given a dictionary, it returns a sequence of tuples, where each tuple is a key-value pair.
 
 9 - How are tuples compared when relational operators are used?
+    Python starts by comparing the first element from each sequence. If they are equal, it goes on to the next elements, and so on, until it finds elements that differ. Subsequent elements are not considered (even if they are really big).
+
 

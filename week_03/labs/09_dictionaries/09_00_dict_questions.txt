@@ -1,35 +1,78 @@
 1 - What is the difference between a list and a dictionary?
 
+        A dictionary has key, value (or label and value) pairs
+
 2 - What is a key-value pair?
+
+        A label and a value - example:
+        name:age
 
 3 - How do you add an item to the dictionary first_dict using square
     brackets?
 
+        first_dict[key] = value
+
+
 4 - How do you add several items to the dictionary first_dict using
     curly braces?
+
+        first_dict = {key1:value1, key2:value2}
 
 5 - When you print out a dictionary, is there a order to the items?
     Why or why not?
 
+        No, because keys are descriptive, not quantitative
+
 6 - How do you print out a value using a key?
+
+        print(my_dict[key])
 
 7 - How does the in operator work with dictionaries?
 
+        It looks for keys that correspond to your query
+
 8 - What is an implementation?
 
-9 - Write an example for loop to traverse a dictionary loop_dict and
-    print out the keys and values.
+        An implementation is a way of performing a computation - A way of getting something done
 
-10 - How can you find search for a key given a value.
-    What is this called?
+9 - Write an example for loop to traverse a dictionary loop_dict and print out the keys and values.
+
+        for key, value in loop_dict.items():
+            print(key, value)
+
+10 - How can you find search for a key given a value. What is this called?
+
+        It is called "Reverse lookup".
+
+            my_dict = {"Ras":1975, "Patrick":1989}
+            my_value = 1989
+
+            def dict_find(my_dict, my_value):
+                for pair in my_dict:
+                    if my_dict[pair] == my_value:
+                        print("Found it! The key is: ", pair )
+
+            dict_find(my_dict, 1989)
+
+
 
 11 - Can lists be keys of a dictionary? Why or why not?
 
+        No. Keys are identifiers, not content. The purpose of a dictionary is to have a unique key for each value
+
 12 - Can lists be values of a dictionary? Why or why not?
+
+        Yes. The value does not have to be immutable
 
 13 - What is a global variable?
 
+        A variable that is available in all of __main__
+
 14 - How do you reassign a global variable inside of a function?
+
+        global variable_name = value
 
 15 - When do you not need to use the "global" keyword to modify the
     value of a global variable?
+
+        When you are assigning a new value. You do have to use global when re-assigning the type
