@@ -16,6 +16,6 @@ The output should look something like this:
 line = ""
 for row in range(1,11):
 	for col in range(1,11):
-		line = line + str(row*col) + "|"
+		line = line + "{:3d}|".format(row*col)
 	print(line)
 	line = ""

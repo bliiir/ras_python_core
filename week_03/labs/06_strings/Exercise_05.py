@@ -14,6 +14,7 @@ while True:
     try:
         word = input("Please enter a word or string of word: ")
         break
+
     except:
         print("Failed, try again!")
         continue
