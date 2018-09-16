@@ -18,3 +18,14 @@ Source: Exercise in chapter "Strings" in Think Python 2e:
 http://greenteapress.com/thinkpython2/html/thinkpython2009.html
 
 '''
+"                This string does not start and end with a bundh of whitespace                ".strip()
+# 'This string does not start and end with a bundh of whitespace
+
+
+"swess arse so skassy".replace("s", "")
+'we are o kay'
+
+"sims sasms so skassy".replace("s", "")
+
+"This string has it's first k k in this position kk".find("k")
+# 27

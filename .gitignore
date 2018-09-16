@@ -2,5 +2,6 @@
 # exclude all virtual environments from commits
 venv/
 env
+/week_03/labs/10_classes_objects_methods/test.py
 # admin notes
 admin.md
