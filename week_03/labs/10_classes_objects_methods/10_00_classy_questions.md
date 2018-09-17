@@ -64,13 +64,15 @@ What do they each do?
 
 - What is the `__init__` method and what is it used for?
 
+    It is the method
+
 
 
 - Give an example `__init__` method for a `Car` class with attributes:
 `make`, `model` and `year.
 
-        class Car(make, model, year):
-            def __init__():
+        class Car():
+            def __init__(self, make, model, year):
                 self.make = make
                 self.model = model
                 self.year = year
@@ -78,7 +80,7 @@ What do they each do?
 
 - How do `__init__` methods handle variable arguments?
 
-        It assigns them to the objet on instantiation
+        It assigns them to the object on instantiation
 
 
 - What is the `__str__` method used for?

@@ -43,14 +43,7 @@ class Car():
     transmissions = ["manual", "automatic", "stepless"]
     fuels = ["gasoline", "diesel", "electricity"]
 
-    def __init__(self,
-        make=0,
-        shape=0,
-        transmission=0,
-        fuel=0,
-        model="S class 450",
-        year=2000):
-
+    def __init__(self,make=0, shape=0, transmission=0, fuel=0, model="S class 450", year=2000):
         self.make = make
         self.shape = shape
         self.transmission = transmission

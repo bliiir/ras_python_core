@@ -70,7 +70,8 @@
 
 14 - How do you reassign a global variable inside of a function?
 
-        global variable_name = value
+        like normal - ```variable_name = value```
+        If assigning a new variable: ```global variable_name = value```
 
 15 - When do you not need to use the "global" keyword to modify the
     value of a global variable?

@@ -22,50 +22,77 @@ class Car():
     """Class that creates car objects
 
     Attributes:
-        fuels (list): A list of fuels that an object of type Car can be powered by
-        makes (list): A list of makes that an object of type Car can be produced by
-        shapes (list): A list of shapes that an object of type Car can take
-        transmissions (list): A list of transmission types that an object of type Car can be equipped with
+        fuels (LIST):           A list of fuels that an object of type Car can be powered by
+        makes (LIST):           A list of makes that an object of type Car can be produced by
+        shapes (liLISTst):      A list of shapes that an object of type Car can take
+        transmissions (LIST):   A list of transmission types that an object of type Car can be equipped with
 
-        make (INT): Integer referencing the makes list
-        shape (INT): Integer referencing the shapes list
-        transmission (INT): Integer referencing the transmissions list
-        fuel (INT): Integer referencing the fuels list
+        make (INT):             Integer referencing the makes list
+        shape (INT):            Integer referencing the shapes list
+        transmission (INT):     Integer referencing the transmissions list
+        fuel (INT):             Integer referencing the fuels list
 
-        model (STR): The model of the car
-        year (INT): Year of production
+        model (STR):            The model of the car
+        year (INT):             Year of production
     """
 
     # Class attributes
-    makes = ["Mercedes", "BMW", "Tesla"]
     shapes = ["coupe", "convertible", "station" ]
     transmissions = ["manual", "automatic", "stepless"]
     fuels = ["gasoline", "diesel", "electricity"]
 
     def __init__(self,
-        make=0,
         shape=0,
         transmission=0,
         fuel=0,
-        model="S class 450",
-        year=2000):
 
-        self.make = make
+        wheels = 4,
+        doors = 5,
+        hp = 150):
+
         self.shape = shape
         self.transmission = transmission
         self.fuel = fuel
-        self.model = model
-        self.year = year
+        self.wheels = wheels
+        self.doors = doors
+        self.hp = hp
 
     def __str__(self):
-        specs = "make: {:10s} model: {:15} year: {:10}".format(self.makes[self.make], self.model, self.year)
+        specs = "shape: {:10s} transmission: {:15} fuel: {:10} wheels: {:10} doors: {:10} horse-power: {:10}".format(self.shapes[self.shape], self.transmissions[self.transmission], self.fuels[self.fuel], self.wheels, self.doors, self.hp)
         return(specs)
 
     def __add__(self, other):
-        try:
-            return(self.makes[self.make] + " and " + other.makes[other.make])
-        except:
-            print("something went wrong")
+            # Returns total horsepower of the two car objects
+            return(self.hp + other.hp)
+
+
+class Musclecar(Car):
+
+    """Creates a musclecar
+
+    Attributes:
+        makes (LIST): Class attribute list with possible makes of the musclecars
+        make (INT): An integer referencing the makes list
+        rimsize (): The size of the musclecars rims
+    """
+
+    makes = ["Dodge", "Ford", "Buick"]
+
+    def __init__(self, make=0, rimsize=16):
+        Car.__init__(self, shape=1, transmission=0, fuel=0, wheels=4, doors=2, hp=400)
+        self.make = make
+        self.rimsize = rimsize
+
+    def __str__(self):
+        specs = "make: {:10s}".format(self.makes[self.make], self.transmissions[self.transmission])
+        return(specs)
+
+class Hotrod(Musclecar):
+
+    def __init__(self, color):
+        Musclecar.__init__(self, make=2, rimsize=18)
+        self.color = color
+
 
 class House():
     """Class that makes very simple house objects
@@ -122,19 +149,7 @@ class Villa(House):
     def __init__(self, roofing):
         self.roofing = roofing
 
-class Sportscar(Car):
 
-    def __init__(self, rimsize):
-        self.rimsize = rimsize
-
-    def __str__(self):
-
-        return(r)
-
-class Lambo(Sportscar):
-
-    def __init__(self, color):
-        self.color = color
 
 
 
@@ -160,8 +175,11 @@ car1.make = 1
 # Print the car object that was changed
 print(car1)
 
-my_sportscar = Sportscar(30)
-print(my_sportscar)
+my_musclecar = Musclecar(1)
+print(my_musclecar)
+
+my_hotrod = Hotrod("Blue")
+print(my_hotrod)
 
 #####
 

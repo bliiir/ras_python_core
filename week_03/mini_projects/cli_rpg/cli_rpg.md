@@ -2,6 +2,15 @@
 
 Using OOP with python to create a text based command-line interface role playing game. Digital dice included! 🎲 ...
 
+# Protagonist
+# Antagonist
+
+class Character():
+
+class Protagonist(Character):
+
+class Antagonist(Character):
+
 
 ## Task
 
