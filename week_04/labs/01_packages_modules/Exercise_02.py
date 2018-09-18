@@ -9,3 +9,6 @@ TIP:
     very common. head over to SO and find a solution!
 
 '''
+from urllib.request import urlopen
+print(urlopen("https://codingnomads.co/").read())
+

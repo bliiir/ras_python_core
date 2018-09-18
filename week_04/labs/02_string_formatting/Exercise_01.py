@@ -5,7 +5,6 @@ formatted like so:
 
 LASTNAME, Name           Office supply item
 LONGERLASTNAME, Name     Office supply item
-
 '''
 
 office = [
@@ -25,3 +24,8 @@ office = [
     {"full_name": "Creed Bratton", "item": "mung beans"},
     {"full_name": "Darryl Philbin", "item": "forklift"},
 ]
+
+for each in office:
+    name = each['full_name'].split()
+    name = name[1].upper() + ", " + name[0]
+    print(f"{name:20s}{each['item']:2s}")

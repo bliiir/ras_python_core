@@ -12,3 +12,5 @@ Employ the concept of [Inheritance](https://codingnomads.atlassian.net/wiki/spac
 features or abilities
 - Make sure that they are sub-classes (i.e. that they **inherit** from the super class),
 thereby sharing the same attributes etc. as the general `Opponent` class
+
+    I have started this but I feel like I have a pretty good understanding of this and will move on to Week4 stuff for now

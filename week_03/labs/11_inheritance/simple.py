@@ -1,18 +1,20 @@
 class Grandparent():
-    def __init__(self, other):
-        self.age = 21
-        self.col= other.col
-        self.hair = other.hair
+    #height = 45
+    def __init__(Ras, Adwan):
+        self.age = 23
+        self.col= "white"
+        self.hair = "Black"
 
-    def something(self):
-        print("Hello")
+    # def something(self):
+    #     print("Hello")
 
 class Parent(Grandparent):
-    def __init__(self, age, col, hair):
-        self.age = age
-        self.col = col
-        self.hair = hair
-        Grandparent.__init__(self, self)
+    def __init__(self):
+        Grandparent.__init__(adwan, ras)
+        self.kindness = 2
+        #self.col = col
+        #self.hair = hair
+
 
     #def something(self):
     #    print("World")
@@ -20,7 +22,8 @@ class Parent(Grandparent):
     pass
 
 
-my_parent = Parent(34, "blue", "pink")
-my_parent.something()
+my_parent = Parent()
+#my_parent.something()
 #my_parent.something()
 print(vars(my_parent))
+#print(my_parent.height)

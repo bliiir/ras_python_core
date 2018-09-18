@@ -11,6 +11,8 @@ import time
 ### Classes ###
 ###############
 
+Trolls, goblins, werewolves, orcs, vampire
+
 class Character(object):
 
     def __init__(self, name):
@@ -61,9 +63,7 @@ class hero(Character):
         hero = Character(name)
     return(hero)
 
-# Instanciate a new hero
-my_hero = hero(input("Halt! Who stands before me? "))
-print("Behold...", my_hero.name, "a level", my_hero.level, "warrior with", my_hero.life, "life arises!!\n"
+
 
 
 # Create the antagonists
