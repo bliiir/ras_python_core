@@ -56,44 +56,17 @@ class Character(object):
 #################
 
 # Create the protagonist
-class hero(Character):
-    def make(name):
-        hero = Character(name)
+def make_hero():
+
+    # Clear the screen
+    cs()
+
+    name = input("Halt! Who stands before me? ")
+    hero = Character(name)
+
+    print("Behold...", hero.name, "a level", hero.level, "warrior with", hero.life, "life arises!!\n")
+
     return(hero)
-
-# Instanciate a new hero
-my_hero = hero(input("Halt! Who stands before me? "))
-print("Behold...", my_hero.name, "a level", my_hero.level, "warrior with", my_hero.life, "life arises!!\n"
-
-
-# Create the antagonists
-class enemy(Character):
-
-    # List of names to use for opponents
-    names = ["Caitlin Comeau", "France Frakes", "Kimber Kellison", "Mila Mirelez", "Mindy Marcellus", "Jacklyn Josephs", "Jacquline Jury", "Leonie Laguardia", "Kortney Knobel", "Lauren Larkin", "Carlene Chace", "Alycia Alan", "Myrle Marks", "Alva Avalos", "Melisa Martinson", "Hugo Hellen", "Diann Dicarlo", "Aurea Allain", "Rudy Rohloff", "Douglass Duggan"]
-
-    #names = ["Caitlin Comeau", "France Frakes"]
-
-    # Make enemies (!)
-    print("Summoning enemies...\n")
-    enemies = []
-    for name in names:
-        enemy = Character(name)
-        enemies.append(enemy)
-
-    # Inject suspense
-    time.sleep(0.1)
-
-    # List enemies
-    # print("Visions of an army of foes roll before your eyes: \n")
-    # for each in enemies:
-    #     print("Enemy name: {:20s} Level: {:5d} Life: {:5d}".format(each.name, each.level, each.life))
-    #     time.sleep(0.01)
-
-    return(enemies)
-
-
-
 
 # Fight to the death. Remove enemy from the enemies list if hero wins. End the game if the hero loses
 def fight(hero, enemy, enemies):
@@ -154,6 +127,33 @@ def fight(hero, enemy, enemies):
 
         # Status
     hero.status(enemy)
+
+
+# Create the antagonists
+def make_enemies():
+
+    # List of names to use for opponents
+    names = ["Caitlin Comeau", "France Frakes", "Kimber Kellison", "Mila Mirelez", "Mindy Marcellus", "Jacklyn Josephs", "Jacquline Jury", "Leonie Laguardia", "Kortney Knobel", "Lauren Larkin", "Carlene Chace", "Alycia Alan", "Myrle Marks", "Alva Avalos", "Melisa Martinson", "Hugo Hellen", "Diann Dicarlo", "Aurea Allain", "Rudy Rohloff", "Douglass Duggan"]
+
+    #names = ["Caitlin Comeau", "France Frakes"]
+
+    # Make enemies (!)
+    print("Summoning enemies...\n")
+    enemies = []
+    for name in names:
+        enemy = Character(name)
+        enemies.append(enemy)
+
+    # Inject suspense
+    time.sleep(0.1)
+
+    # List enemies
+    # print("Visions of an army of foes roll before your eyes: \n")
+    # for each in enemies:
+    #     print("Enemy name: {:20s} Level: {:5d} Life: {:5d}".format(each.name, each.level, each.life))
+    #     time.sleep(0.01)
+
+    return(enemies)
 
 def move():
     angle = random.randint(0,46)

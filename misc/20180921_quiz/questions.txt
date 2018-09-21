@@ -15,11 +15,12 @@ learning simply takes time and practice. .. Ok, now let's get practicing!
 - What are the three primary tenants of Object Oriented Programming (OOP):
 
 	- Inheritance
-	- Encapsulation
-	- Polymorphism
+	- Encapsulation: black boxed - portability/template
+	- Polymorphism: 
 
 - Why is OOP useful?
 
+	- Readbility
 	- Reusability
 	- Portability
 
@@ -78,6 +79,9 @@ learning simply takes time and practice. .. Ok, now let's get practicing!
 	*** venv env_name (Can't remember the exact command, but it's in my notes)
 	source path/activate
 
+	python3 -m venv env
+	souce enve/bin/activate
+
 - Answer the following question on Git and Github:
     - What is a branch?
 
@@ -86,6 +90,7 @@ learning simply takes time and practice. .. Ok, now let's get practicing!
     - What is a remote?
 
 	A git repository that is not the local repo where you initialized git. It could be for example Github or a company server
+	A named url or path that points to another git initialized repo
 
 - What are the commands to do the following?
     - initialize a git repository
@@ -115,14 +120,17 @@ learning simply takes time and practice. .. Ok, now let's get practicing!
     - see the names of the branches
 
 	Notes
+	git branch
 
     - see the names of the remotes
 
 	Notes
+	git remote -v
 
     - add a new remote
 
 	Notes
+	
 
 - Why is the following code bad form?
     try:
@@ -134,6 +142,8 @@ learning simply takes time and practice. .. Ok, now let's get practicing!
 
 	If you are in python 2.7, there is no need for the parenthesis in the first and second print statement. If you are in python 3.x you will get an error because of missing parenthesis in the last print statement
 
+	And of course the general exception should be last and the specific ones first
+
 - Write a function that takes in the name of a file, reads the contents 
 of that file word by word and places each word in a list, then prints
 the list to the console.
@@ -142,6 +152,12 @@ the list to the console.
 	c = f.read()
 	l = c.split()
 	print(l)
+
+	def read_file(filename):
+		with open(filename, "r") as f:
+			data = f.readline()
+			_list =data.split()
+		print(_list)
 
 - Create a custom exception below:
 
@@ -273,6 +289,9 @@ print(reverse(inp))
 ***************
 
 - When should you throw an exception rather than catch the exception?
+
+
+
 - Demonstrate a while loop, and a for loop, that print out every other
 odd number between 1000 and 0 in a descending order:
 - How comfortable do you feel answering the questions above?

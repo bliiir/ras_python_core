@@ -66,10 +66,8 @@ def play(hero, enemies):
                 print("input error - try again")
                 continue
 
-            base.cs()
 
 
 
 if __name__ == "__main__":
     main()
-

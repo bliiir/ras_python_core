@@ -2,20 +2,13 @@ import cli_rpg_base as base
 import time, random, pdb
 
 def main():
-    setup()
-    play(my_hero, enemies)
+    #pdb.set_trace()
+    hero = base.make_hero()
+    enemies = base.make_enemies()
+    play(hero, enemies)
 
     time.sleep(2)
     base.cs()
-
-
-def setup():
-    # Instanciate a new hero
-    my_hero = hero(input("Halt! Who stands before me? "))
-    print("Behold...", my_hero.name, "a level", my_hero.level, "warrior with", my_hero.life, "life arises!!\n"
-
-    enemies = base.make_enemies()
-
 
 
 def play(hero, enemies):
@@ -72,3 +65,4 @@ def play(hero, enemies):
 
 if __name__ == "__main__":
     main()
+
