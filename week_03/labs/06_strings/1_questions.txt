@@ -157,4 +157,3 @@ Potentially offensive jokes on the Internet are sometimes encoded in ROT13, whic
 
 15 - How is the in operator used?
 ```in``` is a boolean operator that takes two strings and returns True if the first appears as a substring in the second or a string and a list and see if the string is in the list. You use it to find out if your string is in a larger string or set of strings.
-

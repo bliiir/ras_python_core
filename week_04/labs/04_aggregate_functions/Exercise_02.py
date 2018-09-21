@@ -9,3 +9,11 @@ for i in range(len(courses)):
     print(f"{i}: {courses[i]} python")
 
 '''
+
+my_list = ["R", "G", "E"]
+
+def my_enum(lst):
+    for index, value in enumerate(my_list):
+        print(index, value)
+
+my_enum(my_list)

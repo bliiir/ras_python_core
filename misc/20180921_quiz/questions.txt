@@ -1,0 +1,359 @@
+Please attempt these questions without the book and without using the
+internet. Yes, you heard right! - this is the real thing. ;)
+Ah... - and also use only Vim for coding.
+When you're done please send the file in the slack channel
+shared with your handsome instructors.
+Remember that these questions are meant to be both a revisit as well
+as a checkup for yourself to see which topics come easier and which
+ones need some more focus. Take your time, and have fun! :)
+Also: don't be too hard on yourself if there's something you don't know
+yet. All of you are doing great, and you're well on your way!
+Take note of what comes difficultly, and come back to revisit it later.
+Keep in mind how far you've already come in only two weeks, and that
+learning simply takes time and practice. .. Ok, now let's get practicing!
+========================================================================
+- What are the three primary tenants of Object Oriented Programming (OOP):
+
+	- Inheritance
+	- Encapsulation
+	- Polymorphism
+
+- Why is OOP useful?
+
+	- Reusability
+	- Portability
+
+- Using the command line, how do you:
+    - change directories?
+
+	cd path
+
+    - list the contents of a folder?
+	
+	ls
+	ls -al
+
+    - print the path of the current directory?
+	
+	pwd
+
+    - move a file from one location to the another?
+
+	mv current_path new_path
+
+    - copy a file from one location to another?
+
+	cp current_path new_path
+
+    - create a file?
+
+	touch filename
+	vim filename
+	sublime filename
+	...
+
+    - create a folder?
+
+	mkdir foldername
+
+    - delete a file?
+	
+	rm path/filename
+
+    - delete a folder?
+
+	rm -r path/foldername
+
+    - print the contents of a file?
+	
+	cat filename
+
+    - edit the contents of a file?
+	
+	vim path/filename
+	sublme path/filename
+
+- How do you create and activate a virtual environment?
+
+	*** venv env_name (Can't remember the exact command, but it's in my notes)
+	source path/activate
+
+- Answer the following question on Git and Github:
+    - What is a branch?
+
+	A sequence of one or more tracked commits that are tracked seperately from other commits
+
+    - What is a remote?
+
+	A git repository that is not the local repo where you initialized git. It could be for example Github or a company server
+
+- What are the commands to do the following?
+    - initialize a git repository
+
+	git init
+
+    - clone a repository from Github
+
+	git clone url (I think I am missing some bits here) 
+
+    - add a file to the staging area
+
+	git add path/filename
+
+    - make a commit
+
+	git commit -m "commit message"
+
+    - push to Github
+
+	git push remotename branchname
+
+    - pull from Github
+
+	git pull remotename branchname
+
+    - see the names of the branches
+
+	Notes
+
+    - see the names of the remotes
+
+	Notes
+
+    - add a new remote
+
+	Notes
+
+- Why is the following code bad form?
+    try:
+        print(10/0)
+    except Exception as exc:
+        print(exc)
+    except ZeroDivisionError as zde:
+        print zde
+
+	If you are in python 2.7, there is no need for the parenthesis in the first and second print statement. If you are in python 3.x you will get an error because of missing parenthesis in the last print statement
+
+- Write a function that takes in the name of a file, reads the contents 
+of that file word by word and places each word in a list, then prints
+the list to the console.
+
+	f = open("questions.txt", "r")
+	c = f.read()
+	l = c.split()
+	print(l)
+
+- Create a custom exception below:
+
+***** BEGIN LONG ASS SCRIPT *****
+
+'''
+OUTPUT
+
+Are you grinding? (y/n) y
+what day is it? friday
+What time is it? early
+Good boy!
+Are you grinding? (y/n) y
+what day is it? friday
+What time is it? late
+Traceback (most recent call last):
+  File "tgif.py", line 12, in work_hard
+    print(1/0)
+ZeroDivisionError: division by zero
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "tgif.py", line 28, in <module>
+    work_hard()
+  File "tgif.py", line 24, in work_hard
+    raise RuntimeError("Please stop working - it's party time!") from exc
+RuntimeError: Please stop working - it's party time!
+'''
+
+
+import time
+
+def work_hard():
+        while True:
+
+                try:
+                        grinding = input("Are you grinding? (y/n) ")
+                        day = input("what day is it? ")
+                        hour = input("What time is it? ")
+
+                        if day == "friday" and hour == "late":
+                                print(1/0)
+
+                        if grinding != "y":
+                                print("Back to work!")
+                                continue
+                        else:
+                                print("Good boy!")
+                                continue
+
+                        print("grinding")
+
+                except Exception as exc:
+                        raise RuntimeError("Please stop working - it's party time!") from exc
+
+                time.sleep(2)
+
+work_hard() 
+
+***** END LONG ASS SCRIPT *****
+
+- Write a very simple function that demonstrates raising the exception above:
+
+	See above
+
+- Explain the following keywords:
+    -try  - the thing you want to execute and avoid halting the program if it doesn't work
+    -except - the thing you want to happen if an exception happens
+    -raise - trigger an exception
+    -finally - do this in all cases
+    -return - The return statement returns a value when a function or method is executed. 
+	
+	Example:
+
+		def hi():
+			return("hi")
+		
+		greeting = hi()
+		print(greeting)
+		>>> hi
+    -break
+	Exits the current conditional level
+
+    -continue
+	Skips to the next iteration of the current conditional
+
+- Explain the difference between a class attribute and instance attribute:
+	
+	A class attribute is hardcoded into the class and all instances and child instances will have it
+	An instance attribute is local to the specific instance of the class
+
+- Write a complete method that reverses a list in place using only one
+extra variable:
+
+**** SCRIPT ****
+
+# Reverse list using only one other variable that cannot be a list
+#
+# Take the fist item from the list and store it in t
+# Replace the first item with the last
+# Replace the last with t
+#
+# Take the second item from the list and store it in t
+# Replace the second item with the second to last
+# Replace the second to last with t
+
+# Get user input
+inp = input("Give me a bunch of numbers, characters or blocks of characters (words) as a string separated by spaces and I will mirror it:\n")
+
+
+
+# Print original list
+def reverse(org):
+
+	# Split the list using spaces as the delimiter
+	list = org.split()
+
+	# Reverse the list
+	for i in range(int(len(list)/2)):
+		t = list[i]
+		list[i] = list[len(list)-i-1]
+		list[len(list)-i-1]  = t
+
+	return("Original:{:10s}\nReversed:{:10s}".format(org, " ".join(list))
+
+print(reverse(inp))
+
+***************
+
+- When should you throw an exception rather than catch the exception?
+- Demonstrate a while loop, and a for loop, that print out every other
+odd number between 1000 and 0 in a descending order:
+- How comfortable do you feel answering the questions above?
+- Describe a variable and a value through their relationship.
+- What are five common data types in Python?
+- What is the difference between an expression and a statement?
+- What are relational operators?
+- What is the difference between == and = ?
+- Demonstrate the use of an if/elif/else conditional.
+- What does mean to have a function that "takes" a value or argument?
+- What is a return value?
+- How do you import a class to one of your programs?
+- Give an example of composition in a function call?
+- Do parameters and variables inside of a function exist outside of it?
+Why or why not?
+- What is the difference between a "fruitful" function and a void function?
+- What are some of the reasons we separate our code into functions?
+- What is the difference between the following two statements?
+    import math
+    <and>
+    from math import *
+    <and>
+    import math as m
+    How can you use the functions of the math module in each case?
+- What is an index?
+- How do you use slicing to produce the string "coding" from the string
+"I love coding!!!"?
+- How do you invoke the replace() method on the string
+'coding is the best' to replace all 's' characters with 'z' characters?
+- What is the difference between and list and a string?
+- How do you use a delimiter with the split() method?
+- If two objects are identical does that also make them equivalent?
+Why or why not?
+- What is a reference?
+- What is it called when an object has more than one reference?
+- How do you add an item to the dictionary first_dict using square
+    brackets?
+- Write an example for loop to traverse a dictionary loop_dict and
+    print out the keys and values.
+- What is a class?
+- What are class attributes?
+- What does it mean when an object is embedded?
+- How is a method different than a function?
+- What is the `__init__` method and what is it used for?
+- Give an example `__init__` method for a `Car` class with attributes:
+`make`, `model` and `year`.
+- What is operator overloading? Give an example.
+- How does a class inherit another class?
+- How do you open a file in write mode? Write some example code below.
+- Can you have a 'try' without an 'except'? Can you have an 'except' without
+a 'try'? Bonus: How does 'else' fit into this picture?
+- What is the variable `__name__` used for?
+- Write a list comprehension to add 1 to all items in a list of
+integers called "_list"
+- What does enumerate() do?
+- You have an object that prints "<generator object <genexpr> at 0x104150eb8>"
+to the console. How can you access its values?
+- What is the advantage of using a generator object compared to a list?
+- What are the key (conceptual) points when constructing a decorator
+function? What does it need to do?
+- When are decorator functions useful?
+- What happens when you use the @decorator syntax when defining a function?
+- Write code that prints out all items passed to a function.
+The amount of items should be able to be different for every function call.
+========================================================================
+Congrats, nice job for getting all the way to the end! :)
+Here's a picture of an island for you: 🏝
+
+
+
+Collapse 
+Message Input
+
+Message barcelona_python
+
+Workspace Directory
+
+Ras 
+https://github.com/bliiir
+:speech_balloon:https://github.com/bliiir
+Clear   |    Edit
+Edit Profile
+
+

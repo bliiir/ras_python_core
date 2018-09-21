@@ -158,4 +158,3 @@ def sed(text1, text2, filename1, filename2, pattern, replacement):
 ###############
 
 sed(t1, t2, n1, n2, p1, p2)
-
