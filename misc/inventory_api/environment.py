@@ -1,35 +1,43 @@
 # Python's bundled WSGI server
 from wsgiref.simple_server import make_server
+from wsgiref.util import guess_scheme
+import json
+import inventory
 
-ip_address = "localhost" # = 127.0.0.1
+# set the encoding
+encoding = 'utf-8'
+
+ip_address = "localhost"
+
+# set port
 port = 8000
 
-def application (environ, start_response):
+#create object of MyApp
+my_obj = inventory.MyApp()
 
-    # Sorting and stringifying the environment key, value pairs
-    response_body = [
-        '%s: %s' % (key, value) for key, value in sorted(environ.items())
-    ]
-    response_body = '\n'.join(response_body)
+def application_(environ, start_response):
 
-    status = '200 OK'
-    response_headers = [
-        ('Content-Type', 'text/plain'),
-        ('Content-Length', str(len(response_body)))
-    ]
-    start_response(status, response_headers)
+    try:
+        response_text = my_obj.dispatch(environ)
 
-    return [response_body.encode('utf-8')]
+    except Exception as exc:
+        status = "500 Internal Server Error"
+        print(exc)
+        response_text = ''
 
-# Instantiate the server
-httpd = make_server (
-    ip_address, # The host name
-    port, # A port number where to wait for the request
-    application # The application object name, in this case a function
-)
+    status = '200 OK' # HTTP Status
+    headers = [('Content-type', 'text/plain; charset=' + encoding)] # HTTP Headers
 
-print(f"serving application on {port}...")
+    start_response(status, headers)
 
-# Wait for a single request, serve it and quit
-#httpd.handle_request()
+    return [response_text.encode('utf-8')]
+
+
+httpd = make_server(ip_address, port, application_)
+print(f"Serving on port {port}...")
+
+# Serve until process is killed
 httpd.serve_forever()
+
+
+
