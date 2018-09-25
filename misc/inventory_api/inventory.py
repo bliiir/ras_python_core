@@ -1,6 +1,3 @@
-
-- [ ] Write api docs
-
 import json
 import sys
 
