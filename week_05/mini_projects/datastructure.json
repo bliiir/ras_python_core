@@ -1,0 +1,21 @@
+
+
+
+
+{
+    "martin": {
+        "followers":    100,
+        "mentions":     100,
+        "following":    100,
+        "tweets":       100,
+        "category":     1
+    }
+    "caden": {
+        "followers":    100,
+        "mentions":     100,
+        "following":    100,
+        "tweets":       100,
+        "category":     1
+    }
+
+}

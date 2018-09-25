@@ -11,7 +11,7 @@ import time
 ### Classes ###
 ###############
 
-Trolls, goblins, werewolves, orcs, vampire
+# Trolls, goblins, werewolves, orcs, vampire
 
 class Character(object):
 
@@ -72,7 +72,7 @@ class enemy(Character):
     # List of names to use for opponents
     names = ["Caitlin Comeau", "France Frakes", "Kimber Kellison", "Mila Mirelez", "Mindy Marcellus", "Jacklyn Josephs", "Jacquline Jury", "Leonie Laguardia", "Kortney Knobel", "Lauren Larkin", "Carlene Chace", "Alycia Alan", "Myrle Marks", "Alva Avalos", "Melisa Martinson", "Hugo Hellen", "Diann Dicarlo", "Aurea Allain", "Rudy Rohloff", "Douglass Duggan"]
 
-    #names = ["Caitlin Comeau", "France Frakes"]
+    # names = ["Caitlin Comeau", "France Frakes"]
 
     # Make enemies (!)
     print("Summoning enemies...\n")
