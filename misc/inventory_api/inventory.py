@@ -1,6 +1,7 @@
 import json
 import sys
 
+
 class MyApp:
 
     """Inventory manager
