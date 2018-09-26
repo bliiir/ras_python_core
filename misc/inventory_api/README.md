@@ -24,6 +24,12 @@ The inventory project provides a simple API to read and write to an inventory us
 
 Deploy the inventory files below to your server:
 
+
+| hewr|wetwt |
+|:--| :--|
+| dfg | wets |
+
+
 | Filename | Description |
 | :-- | :-- |
 | docs_Inventory.md | This file |
@@ -50,9 +56,8 @@ Deploy the inventory files below to your server:
 
 ### Contribute
 
-
-- Issue Tracker: github.com/$project/$project/issues
-- Source Code: github.com/$project/$project
+- Issue Tracker: https://github.com/bliiir/ras_python_core/issues
+- Source Code: https://github.com/bliiir/ras_python_core
 
 
 ### Support
